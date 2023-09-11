@@ -3,7 +3,7 @@
 }
 
 .site__title {
-  font-size: 3rem;
+  font-size: 5rem;
   margin-bottom: 1rem;
   position: relative;
   a {
@@ -21,6 +21,21 @@
     left: 0;
     bottom: -1.3rem;
   }
+}
+
+.site__subtitle {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  position: relative;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.site__section_title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  color: white;
 }
 
 .site__description {
