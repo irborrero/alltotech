@@ -148,6 +148,10 @@ nav > * {
   padding: 2rem 3rem;
 }
 
+.site_header {
+  text-align: center;
+}
+
 .site__title {
   font-size: 5rem;
   margin-bottom: 1rem;
@@ -162,9 +166,11 @@ nav > * {
 .site__title.site__title--separator:after {
   position: absolute;
   border-bottom: 3px solid #F79E77;
-  width: 40%;
+  width: 60%;
   content: "";
   left: 0;
+  right: 0;
+  margin: auto;
   bottom: -1.3rem;
 }
 
@@ -182,12 +188,27 @@ nav > * {
   position: relative;
   color: white;
 }
+.site__section_title a {
+  color: white;
+}
+.site__section_title a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
 
 .site__description {
   color: #c1bfbf;
   font-size: 1.2rem;
   font-weight: 200;
   padding-top: 1rem;
+  z-index: 1;
+}
+
+.site__section_description {
+  color: #c1bfbf;
+  font-size: 1.2rem;
+  font-weight: 200;
+  margin-top: 0%;
   z-index: 1;
 }
 
@@ -205,6 +226,26 @@ nav > * {
   margin: 2rem 5rem 0 5rem;
   font-size: 1.2rem;
   font-family: "Source Sans Pro", sans-serif;
+}
+
+.site__apply {
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  width: 20%;
+  border: none;
+  background-color: #F79E77;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+  border-radius: 9px;
+  font-weight: bold;
+  padding: 7px;
+}
+.site__apply:hover {
+  background-color: red;
 }
 
 .site__navigation {
@@ -511,7 +552,6 @@ nav > * {
   }
   .main {
     display: flex;
-    padding-left: 60px;
     flex-grow: 1;
   }
   #site__bg {

@@ -4,12 +4,17 @@
       <meta charset="utf-8">
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>All To Tech organization</title>
+      <title>AllToTech</title>
       <link rel="stylesheet" href="assets/css/alltotech.css">
       <link rel="author" href="humans.txt">
       <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Rufina:400,700|Source+Sans+Pro:200,300,400,600,700" rel="stylesheet">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+      <style>
+        #interview-description, #training-description, #referral-description {
+            display: none;
+        }
+    </style>
     </head>
     <body>
       <div id="site__bg"></div>
@@ -18,41 +23,45 @@
           <div class="logo nav__logo">
             <a href="index.html"><img src="assets/images/logo.svg" alt="logo"/></a>
           </div>
-          <ul class="nav__list">
-            <li class="nav__item"><a href="#">Episodes</a></li>
-          </ul>
           <ul class="nav__social">
-            <li><a href="#" class="nav_social__item"><i class="fab fa-google-play"></i></a></li>
-            <li><a href="#" class="nav_social__item"><i class="fab fa-itunes-note"></i></a></li>
-            <li><a href="#" class="nav_social__item"><i class="fas fa-rss-square"></i></a></li>
           </ul>
         </nav>
         <section class="site">
-          <h1 class="site__title site__title--separator"><a href="index.html">All To Tech</a></h1>
-          <p class="site__description">Non profit organization helping candidates land SDE offers in Big Tech companies.</p>
+          <section class="site_header">
+            <h1 class="site__title site__title--separator"><a href="index.html">All To Tech</a></h1>
+            <p class="site__description">Non profit organization helping candidates land SDE offers in Big Tech companies.</p>
+          </section>
           <h2 class="site__subtitle">How it works</h2>
-
           <ol type = "1">
-            <li>
-              <h3 class="site__section_title">Interview</h3>
-              <p class="site__description">Apply for the interview process. Once you send your candidature, you will be contacted by somebody from the program to schedule an interview. We will ask you some questions and do a coding interview. Don't worry! You don't need to prepare for this. We just want to get to know you a bit better.</p>
+            <li class="site__section_title">
+              <h4><a onclick="toggleElement('interview-description')">Interview</a></h4>
+              <p class="site__section_description" id="interview-description">
+                Apply for the interview process. Once you send your application, you will be contacted by somebody from the organization to schedule an interview. We will ask you some questions and do a coding interview.
+                <br> Don't worry! <b>You don't need to prepare for this.</b> We just want to get to know you a bit better.</p>
             </li>
-            <li>
-              <h3 class="site__section_title">Training program</h3>
-              <p class="site__description">Selected candidates are paired with a mentor inside a Big Tech company. Your mentor will be the person that working with you for the next 2 months! The program will walk you through data structures and algorithms that you need to master in order to pass a coding interview in any tech company. You will also practice doing mock interviews with your mentor. </p>
+            <li class="site__section_title">
+              <h4><a onclick="toggleElement('training-description')">Training program</a></h4>
+              <p class="site__section_description" id="training-description">Selected candidates will be assigned a mentor inside a Big Tech company. Your mentor will be the person working with you for the next <b>2 months</b>. 
+                <br> The program will walk you through <b>data structures and algorithms</b> that you need to master in order to face technical interviews. You will also practice by doing <b>mock interviews</b> and other group activities.</p>
             </li>
-            <li>
-              <h3 class="site__section_title">Referral</h3>
-              <p class="site__description">At the end of the program you will be referred for an internship opportunity by your mentor and will be able to test your skills in real world interviews!</p>
+            <li class="site__section_title">
+              <h4><a onclick="toggleElement('referral-description')">Referral</a></h4>
+              <p class="site__section_description" id="referral-description">At the end of the program you <b>will be referred for an internship opportunity</b> by your mentor and will be able to test your skills in real world interviews!</p>
             </li>
          </ol>
+         <button class="site__apply">Apply</button>
         </section>
-      <footer>
-        <p class="footer__content">Dropcast is a template made by <a href="https://amie-chen.com">Amie Chen</a> exclusively for Codrops</p>
-        <div class="logo footer__logo">
-          <a href="https://tympanus.net/codrops/"><img src="assets/images/logo-white.svg" alt="logo"/></a>
-        </div>
-      </footer>
       <script src="assets/js/dropcast.js"></script>
+      <script>
+          function toggleElement(elementId) {
+              var element = document.getElementById(elementId)
+              if(element.style.display === "none") {
+                element.style.display = "block";
+              } else {
+                element.style.display = "none";
+              }
+          }
+      </script>
+   
     </body>
 </html>
